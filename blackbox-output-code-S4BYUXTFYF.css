@@ -1,0 +1,26 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.hero {
+    background: linear-gradient(to right, #007bff, #28a745);
+    color: white;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+section {
+    padding: 60px 0;
+}
+
+footer {
+    margin-top: auto;
+}
+
+#map {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

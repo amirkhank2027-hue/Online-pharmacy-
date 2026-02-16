@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waqas Tibb Health Center</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Waqas Tibb Health Center</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showLogin()">Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero bg-light text-center py-5">
+        <div class="container">
+            <h1>Welcome to Waqas Tibb Health Center</h1>
+            <p>Your trusted partner in medical care and wellness.</p>
+            <img src="https://source.unsplash.com/featured/?medical-clinic" alt="Medical Clinic" class="img-fluid rounded mb-3" style="max-width: 600px;">
+            <a href="#contact" class="btn btn-primary">Book an Appointment</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="https://source.unsplash.com/featured/?stethoscope" alt="General Medicine" class="img-fluid rounded mb-3" style="height: 200px; object-fit: cover;">
+                    <h4>General Medicine</h4>
+                    <p>Comprehensive check-ups and treatments.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://source.unsplash.com/featured/?pills" alt="Pharmacy" class="img-fluid rounded mb-3" style="height: 200px; object-fit: cover;">
+                    <h4>Pharmacy</h4>
+                    <p>On-site prescription services.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://source.unsplash.com/featured/?medical-team" alt="Specialist Consultations" class="img-fluid rounded mb-3" style="height: 200px; object-fit: cover;">
+                    <h4>Specialist Consultations</h4>
+                    <p>Expert care from our specialists.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Us</h2>
+            <p>Waqas Tibb Health Center is dedicated to providing high-quality medical services with a focus on patient-centered care. Our team of experienced professionals ensures your health is our top priority.</p>
+            <img src="https://source.unsplash.com/featured/?doctors" alt="Our Team" class="img-fluid rounded mx-auto d-block" style="max-width: 500px;">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="appointmentForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Preferred Date</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Book Appointment</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Address:</strong> 123 Health Street, City, Country</p>
+                    <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+                    <p><strong>Email:</strong> info@waqastibb.com</p>
+                    <div id="map" style="height: 300px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Waqas Tibb Health Center. All rights reserved.</p>
+        <img src="https://source.unsplash.com/featured/?heart" alt="Heart Icon" style="height: 30px;">
+    </footer>
+
+    <!-- Login Modal (for Account API) -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Patient Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="button" class="btn btn-secondary" onclick="registerUser()">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
